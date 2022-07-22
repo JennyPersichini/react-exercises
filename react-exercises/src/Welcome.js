@@ -8,6 +8,10 @@ export default class Welcome extends React.Component {
         <p> Welcome, {this.props.name} !</p>
         )
     }
+
+    static defaultProps = {
+        name: "Valerio",
+     }
 }
 
 root.render(<Welcome />);
