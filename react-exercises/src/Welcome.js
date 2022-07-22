@@ -1,17 +1,21 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 export default class Welcome extends React.Component {
-    render() {
-        return (
+  render() {
+    return (
+      <div>
         <p> Welcome, {this.props.name} !</p>
-        )
-    }
+        <p>Your age is {this.props.age}</p>
+      </div>
+    );
+  }
 
-    static defaultProps = {
-        name: "Valerio",
-     }
+  static defaultProps = {
+    name: "Valerio",
+    age: "27",
+  };
 }
 
 root.render(<Welcome />);

@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Welcome name={this.defaultProps}/>
+        <Welcome name={this.defaultProps} age={this.defaultProps}/>
       </div>
     );
   }
