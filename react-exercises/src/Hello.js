@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-class Hello extends React.Component {
+export default class Hello extends React.Component {
   render() {
     return (
       <div>
@@ -12,14 +12,4 @@ class Hello extends React.Component {
   }
 }
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Hello />
-      </div>
-    );
-  }
-}
-
-root.render(<App />);
+root.render(<Hello />);
