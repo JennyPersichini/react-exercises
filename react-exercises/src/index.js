@@ -12,4 +12,14 @@ class Hello extends React.Component {
   }
 }
 
-root.render(<Hello />);
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Hello />
+      </div>
+    );
+  }
+}
+
+root.render(<App />);
