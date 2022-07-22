@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Age from './Age';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 export default class Welcome extends React.Component {
@@ -8,7 +7,6 @@ export default class Welcome extends React.Component {
     return (
       <div>
         <p> Welcome, <strong>{this.props.name}</strong> !</p>
-        <Age />
       </div>
     );
   }
