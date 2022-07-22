@@ -1,12 +1,10 @@
-import React from "react";
-import Welcome from "./Welcome";
+import React from 'react'
+import Counter from './Count'
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Welcome name={this.defaultProps} />
-      </div>
-    );
-  }
+    render() {
+        return (
+                <Counter />
+        )
+    }
 }
