@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Message from "./Message";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 export default class Hello extends React.Component {
@@ -7,7 +8,7 @@ export default class Hello extends React.Component {
     return (
       <div>
         <h1>Hello, World!</h1>
-        <p>What a beautiful day!</p>
+        <Message />
       </div>
     );
   }
