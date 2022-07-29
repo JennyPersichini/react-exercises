@@ -2,7 +2,7 @@ import React from 'react'
 import ClickCounter from './ClickCounter'
 import ClickTracker from './ClickTracker'
 import InteractiveWelcome from './InteractiveWelcome'
-import Login from './Login'
+import UncontrolledLogin from './UncontrolledLogin'
 
 export default class App extends React.Component {
     render() {
@@ -11,7 +11,7 @@ export default class App extends React.Component {
             <ClickCounter initialValue={50} incrementBy={2}/>
             <ClickTracker />
             <InteractiveWelcome />
-            <Login />
+            <UncontrolledLogin />
             </div>
         )
     }
