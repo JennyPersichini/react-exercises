@@ -20,10 +20,15 @@ export default class TodoList extends React.Component {
             newItem : event.target.value
         })
     }
+    
+    resetAll = (event) => {
+        this.setState({
+            items: ['']
+        })
+    }
 
 render() {
     return(
-        <>
         <div>
             <h1>Cose da fare:</h1>
             <ul>
@@ -31,9 +36,8 @@ render() {
             </ul>
             <input type='text' onChange={this.addItem} value={this.state.newItem} />
             <button onClick={this.addEvent} disabled={!this.state.newItems}>Aggiungi altro</button>
+            <button onClick={this.resetAll}>RESET!</button>
         </div>
-
-        </>
     )
 }
 }
