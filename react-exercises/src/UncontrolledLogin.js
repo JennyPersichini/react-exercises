@@ -34,10 +34,14 @@ export default class UncontrolledLogin extends React.Component {
 		console.log(this.state)
 	}
 
+    componentDidMount() {
+        this.searchInput.focus()
+    }
+
     render() {
         return (
             <div>
-                <input name='username' placeholder='username' value={this.state.username} onChange={this.handleUsernameInputChange}/>
+                <input ref={inputEl => (this.searchInput = inputEl)} name='username' placeholder='username' value={this.state.username} onChange={this.handleUsernameInputChange}/>
                 <input name='password' placeholder='password' type='password' value={this.state.password} onChange={this.handlePasswordInputChange}/>
                 <input name='remember' type='checkbox' checked={this.state.remember} onChange={this.handleRememberInputChange}/>
                 
