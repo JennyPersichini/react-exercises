@@ -22,13 +22,9 @@ export default class InteractiveWelcome extends React.Component {
     })
   }
 
-  /*componentDidUpdate() {
-    console.log(this.state);
-  }*/
-
   render() {
     return (
-      <div>
+      <div className="welcome">
         <Welcome />
         <input
           name="username"
