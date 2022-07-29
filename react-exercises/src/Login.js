@@ -25,14 +25,6 @@ export default class Login extends React.Component {
         this.props.onLogin(this.state)
     }
 
-    resetAll = () => {
-        this.setState({
-            username: "",
-        password: "",
-        remember: false
-        })
-    }
-
     render() {
         return (
             <div>
@@ -40,8 +32,7 @@ export default class Login extends React.Component {
                 <input name='password' placeholder='password' type='password' value={this.state.password} onChange={this.handlePasswordInputChange}/>
                 <input name='remember' type='checkbox' checked={this.state.remember} onChange={this.handleRememberInputChange}/>
                 
-                <button data-testid="login" disabled = {!this.state.username || !this.state.password} onClick={this.loginButtonClick}>LogIn!!</button>
-                <button onClick={this.resetAll}>Reset!</button>
+                <button data-testid="login" disabled = {!this.state.username || !this.state.password} onClick={this.loginButtonClick} style={{backgroundColor: this.state.password.length < 8 ? 'red' : 'green'}}>LogIn!!</button>
             </div>
         )
     }
