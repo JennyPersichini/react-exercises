@@ -5,8 +5,6 @@
     border: 2px solid blue;
 }
 
-<<<<<<< HEAD
-=======
 .parent {
     background-color: white;
     border: 5px solid red;
@@ -15,4 +13,3 @@
     width: 400px;
     height: auto;
 }
->>>>>>> component-composition-01
