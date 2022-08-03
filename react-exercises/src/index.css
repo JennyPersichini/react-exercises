@@ -4,3 +4,12 @@
     background-color: aquamarine;
     border: 2px solid blue;
 }
+
+.parent {
+    background-color: white;
+    border: 5px solid red;
+    margin: 20px;
+    padding: 10%;
+    width: 400px;
+    height: auto;
+}

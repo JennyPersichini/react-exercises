@@ -5,18 +5,21 @@ import InteractiveWelcome from './InteractiveWelcome'
 import Login from './Login'
 import TodoList from './ToDoList'
 import UncontrolledLogin from './UncontrolledLogin'
+import Container from './Container'
 
 export default class App extends React.Component {
     render() {
         return (
-          <div>
-            <ClickCounter initialValue={50} incrementBy={2}/>
-            <ClickTracker />
-            <InteractiveWelcome />
-            <UncontrolledLogin />
-            <TodoList />
-            <Login />
-            </div>
+            <>
+            <Container>
+              <ClickCounter initialValue={50} incrementBy={2} />
+              <ClickTracker />
+              <InteractiveWelcome />
+              <UncontrolledLogin />
+              <TodoList />
+              <Login />
+            </Container>
+          </>    
         )
     }
 }
