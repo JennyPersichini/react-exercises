@@ -10,14 +10,16 @@ import UncontrolledLogin from "./UncontrolledLogin";
 export default class App extends React.Component {
     render() {
         return (
-          <div>
-            <ClickCounter initialValue={50} incrementBy={2}/>
-            <ClickTracker />
-            <InteractiveWelcome />
-            <UncontrolledLogin />
-            <TodoList />
-            <Login />
-            </div>
+            <>
+            <Container>
+              <ClickCounter initialValue={50} incrementBy={2} />
+              <ClickTracker />
+              <InteractiveWelcome />
+              <UncontrolledLogin />
+              <TodoList />
+              <Login />
+            </Container>
+          </>    
         )
     }
 }
