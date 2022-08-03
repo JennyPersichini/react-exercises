@@ -11,7 +11,7 @@ export default class App extends React.Component {
     render() {
         return (
             <>
-            <Container>
+            <Container title='TITOLO'>
               <ClickCounter initialValue={50} incrementBy={2} />
               <ClickTracker />
               <InteractiveWelcome />
