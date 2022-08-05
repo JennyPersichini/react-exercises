@@ -8,18 +8,43 @@ import TodoList from "./ToDoList";
 import UncontrolledLogin from "./UncontrolledLogin";
 
 export default class App extends React.Component {
-    render() {
-        return (
-            <>
-            <Container title='TITOLO'>
-              <ClickCounter initialValue={50} incrementBy={2} />
-              <ClickTracker />
-              <InteractiveWelcome />
-              <UncontrolledLogin />
-              <TodoList />
-              <Login />
-            </Container>
-          </>    
-        )
-    }
+  render() {
+    return (
+      <>
+        <Container title="TITOLO">
+          <ClickCounter initialValue={50} incrementBy={2} />
+          <ClickTracker />
+          <InteractiveWelcome />
+          <UncontrolledLogin />
+          <TodoList
+            render = 
+            {(items, newState, deleteState) => {
+              const Copy = [...items.items];
+              return (
+                <ul className="list">
+                  {Copy.map((el, i) => (
+                    <div key={i}>
+                      <li>
+                        {el}
+                        <button
+                          onClick={() => {
+                            deleteState(Copy, i);
+                            newState(Copy);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </li>
+                    </div>
+                  ))}
+                </ul>
+              );
+            }}
+            setState=""
+          />
+          <Login />
+        </Container>
+      </>
+    );
+  }
 }
