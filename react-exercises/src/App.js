@@ -2,8 +2,9 @@ import React from "react";
 import ClickCounter from "./ClickCounter";
 import ClickTracker from "./ClickTracker";
 import Container from "./Container";
+import DisplayLanguage from "./DisplayLanguage";
 import InteractiveWelcome from "./InteractiveWelcome";
-import { LenguageContext } from "./LanguageContext";
+import { LanguageContext } from "./LanguageContext";
 import Login from "./Login";
 import TodoList from "./ToDoList";
 import UncontrolledLogin from "./UncontrolledLogin";
@@ -26,9 +27,8 @@ handleLenguageChange = (event) => {
         <option value='en'>English</option>
         <option value='it'>Italiano</option>
       </select>
-      <LenguageContext.Provider value={this.state.language}>
-
-     
+      <LanguageContext.Provider value={this.state.language}>
+        <DisplayLanguage />
         <Container title="TITOLO">
           <ClickCounter initialValue={50} incrementBy={2} />
           <ClickTracker />
@@ -62,7 +62,7 @@ handleLenguageChange = (event) => {
           />
           <Login />
         </Container>
-        </LenguageContext.Provider>
+        </LanguageContext.Provider>
       </>
     );
   }
