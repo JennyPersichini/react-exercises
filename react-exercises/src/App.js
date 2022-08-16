@@ -4,6 +4,7 @@ import { Sum } from './Sum';
 import { ClickCounter } from "./ClickCounter";
 import { LoginForm } from "./Login";
 import { Count } from './Count';
+import { GithubUser } from "./GithubUser";
 
 export default class App extends React.Component {
   
@@ -24,6 +25,7 @@ handleLenguageChange = (event) => {
         <ClickCounter />
         <Count /> 
         <LoginForm />
+        <GithubUser />
       </>
     );
   }
