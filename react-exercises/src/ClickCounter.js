@@ -1,29 +1,17 @@
-import React from 'react';
-import CounterDisplay from "./CounterDisplay";
-import ReactDOM from "react-dom";
+import { useState } from 'react';
 
-const root = ReactDOM.createRoot(document.querySelector("#root"));
-export default class ClickCounter extends React.Component {
-  state = {
-    count: this.props.initialValue,
-  };
+export function ClickCounter() {
 
-  handleCounterIncrement = () => {
-    this.setState((state) => {
-        return {
-            count: state.count + this.props.incrementBy
-        }
-    })
-}
+  const [count, setCount] = useState(0)
 
-  render() {
-    return (
-        <div> 
-        <CounterDisplay count = {this.state.count}/> 
-        <button onClick={this.handleCounterIncrement}>Increment</button>
-    </div>
-    );
+  const handleCounterIncrement = () => {
+    setCount(count + 1)
   }
-}
 
-root.render(<ClickCounter />);
+    return (
+      <div>
+      <h1>Count : {count}</h1>
+      <button onClick = {()=>handleCounterIncrement()}>Increment</button>
+      </div>
+    )
+  }

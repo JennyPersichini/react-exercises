@@ -1,6 +1,7 @@
 import React from "react";
 import { Welcome } from './Welcome';
 import { Sum } from './Sum';
+import { ClickCounter } from "./ClickCounter";
 
 export default class App extends React.Component {
   
@@ -18,6 +19,7 @@ handleLenguageChange = (event) => {
       <>
         <Welcome />
         <Sum />
+        <ClickCounter />
       </>
     );
   }
