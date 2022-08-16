@@ -1,5 +1,6 @@
 import React from "react";
 import { Welcome } from './Welcome';
+import { Sum } from './Sum';
 
 export default class App extends React.Component {
   
@@ -16,6 +17,7 @@ handleLenguageChange = (event) => {
     return (
       <>
         <Welcome />
+        <Sum numbers = {[1,2,3,4,5]}/>
       </>
     );
   }
