@@ -9,7 +9,7 @@ export default class Welcome extends React.Component {
     return (
       <div>
         {name === "John" ? <p>Welcome {name}!</p> : undefined}
-        <Age />
+        <Age age="18" />
       </div>
     );
   }
