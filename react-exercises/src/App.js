@@ -8,6 +8,7 @@ import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { CarDetails } from "./CarDetails";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { FilteredList } from "./FilteredList";
 
 export default class App extends React.Component {
   
@@ -32,6 +33,7 @@ handleLenguageChange = (event) => {
         <GithubUserList />
         <CarDetails initialData={{ model: "Smart", year: 2006, color: "Blue" }} />
         <DisplayLanguage />
+        <FilteredList />
       </>
     );
   }
