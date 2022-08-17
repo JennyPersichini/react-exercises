@@ -2,7 +2,7 @@ import React from "react";
 import { Welcome } from './Welcome';
 import { Sum } from './Sum';
 import { ClickCounter } from "./ClickCounter";
-import { LoginForm } from "./Login";
+import { Login } from "./Login";
 import { Count } from './Count';
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
@@ -25,7 +25,7 @@ handleLenguageChange = (event) => {
         <Sum />
         <ClickCounter />
         <Count /> 
-        <LoginForm />
+        <Login />
         <GithubUser />
         <GithubUserList />
       </>
