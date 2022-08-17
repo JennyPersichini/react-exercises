@@ -7,6 +7,7 @@ import { Count } from './Count';
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { CarDetails } from "./CarDetails";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export default class App extends React.Component {
   
@@ -30,6 +31,7 @@ handleLenguageChange = (event) => {
         <GithubUser />
         <GithubUserList />
         <CarDetails initialData={{ model: "Smart", year: 2006, color: "Blue" }} />
+        <DisplayLanguage />
       </>
     );
   }
