@@ -14,7 +14,7 @@ export function GithubUser({ username }) {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => {
         if (response.status !== 200) {
-          setError(new Error(`User ${username} not found :(`));
+          setError(new Error(`User ${username} not found`));
         }
         return response.json();
       })
@@ -39,7 +39,6 @@ export function GithubUser({ username }) {
       {error && <h1>There has been an error: {error.message}</h1>}
       <h1>{user?.name}</h1>
       <p>{user?.login}</p>
-      <img src={user?.avatar_url} />
     </div>
   );
 }
