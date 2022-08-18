@@ -4,6 +4,7 @@ import { Welcome } from "./Welcome";
 import { ClickCounter } from "./ClickCounter";
 import { ShowGithubUser } from "./ShowGithubUser";
 import { GithubUserList } from "./GithubUserList";
+import { GithubUser } from "./GithubUser";
 
 export function App() {
   return (
@@ -20,6 +21,7 @@ export function App() {
           <Route path="/:username" element={<ShowGithubUser />} />
           <Route index element={<h3>Add a user and select it</h3>} />
         </Route>
+        <Route path="users" element={<GithubUser />} />
         <Route
           path="*"
           element={
