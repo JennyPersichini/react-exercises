@@ -11,7 +11,8 @@ export default class Welcome extends React.Component {
           {" "}
           Welcome, <strong>{this.props.name}</strong> !
         </p>
-        <Age age={this.props.age >= 18 && <p>{this.props.age}</p>} />
+        {/* <Age age={this.props.age >= 18 && <p>{this.props.age}</p>} /> */}
+        {this.props.age >= 18 && <Age age={this.props.age} />}
       </div>
     );
   }
