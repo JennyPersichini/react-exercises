@@ -8,8 +8,8 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <div>
-        {name === "John" ? <p>Welcome {name}!</p> : undefined}
-        <Age age="18" />
+        <p>Welcome {name}!</p>
+        {this.props.age > 18 && this.props.age < 65 && name === "John" && <Age age="19" />}
       </div>
     );
   }
